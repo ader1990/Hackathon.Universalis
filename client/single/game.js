@@ -20,12 +20,12 @@ $(document).ready(function(){
             numberOfObjects:10,
             masterObject:null
         },
-        initMasterObject:function(){            
-            var material2 = new THREE.MeshBasicMaterial({
-                color: 0xcc00ff
-			});     
-			var suntext=new THREE.ImageUtils.loadTexture("../img/Planet2.jpg",{},function(){});
-			var sphereMaterial=new THREE.MeshBasicMaterial({map:suntext});	
+        initMasterObject:function(){ 
+            
+            var suntext=new THREE.ImageUtils.loadTexture("../img/Planet2.jpg",{},function(){});
+            var sphereMaterial=new THREE.MeshBasicMaterial({
+                map:suntext
+            });	
 			
             var geometry3 = new THREE.SphereGeometry ( 0.275,30,30); 
             var object=new THREE.Mesh(geometry3, sphereMaterial);
@@ -89,9 +89,9 @@ $(document).ready(function(){
     var geometrySphereLevels=[
     new THREE.SphereGeometry(0.05,10,10),
     new THREE.SphereGeometry(0.1,10,10),
-    new THREE.SphereGeometry(0.15,5,5),
-    new THREE.SphereGeometry(0.20,5,5),
-    new THREE.SphereGeometry(0.3,5,5)
+    new THREE.SphereGeometry(0.15,15,15),
+    new THREE.SphereGeometry(0.20,15,15),
+    new THREE.SphereGeometry(0.3,15,15)
     ];
                 
     var geometry = new THREE.CubeGeometry(0.4,0.4,0.4); 
@@ -174,9 +174,9 @@ $(document).ready(function(){
                         //objects[i].object.position.z=objects[i].velocity.z*3;
                         }
                     
-                        Context.GameVariables.movingObjects[i].object.rotation.x+=Context.GameVariables.movingObjects[i].velocity.x;
-                        Context.GameVariables.movingObjects[i].object.rotation.y+=Context.GameVariables.movingObjects[i].velocity.y;
-                        Context.GameVariables.movingObjects[i].object.rotation.z+=Context.GameVariables.movingObjects[i].velocity.z;
+                        Context.GameVariables.movingObjects[i].object.rotation.x+=Context.GameVariables.movingObjects[i].velocity.x/11;
+                        Context.GameVariables.movingObjects[i].object.rotation.y+=Context.GameVariables.movingObjects[i].velocity.y/10;
+                        Context.GameVariables.movingObjects[i].object.rotation.z+=Context.GameVariables.movingObjects[i].velocity.z/8;
                     }
                 }
             }
