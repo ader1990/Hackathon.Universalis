@@ -23,9 +23,12 @@ $(document).ready(function(){
         initMasterObject:function(){            
             var material2 = new THREE.MeshBasicMaterial({
                 color: 0xcc00ff
-            });             
+			});     
+			var suntext=new THREE.ImageUtils.loadTexture("../img/Planet2.jpg",{},function(){});
+			var sphereMaterial=new THREE.MeshBasicMaterial({map:suntext});	
+			
             var geometry3 = new THREE.SphereGeometry ( 0.275,0.275,0.275); 
-            var object=new THREE.Mesh(geometry3, material2);
+            var object=new THREE.Mesh(geometry3, sphereMaterial);
             Context.GameVariables.masterObject=new MovableObject(Context,object,3);
             Context.ThreeJSVariables.scene.add(object);
             Context.GameVariables.movingObjects.push(Context.GameVariables.masterObject);
