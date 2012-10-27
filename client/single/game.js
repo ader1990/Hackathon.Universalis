@@ -27,7 +27,7 @@ $(document).ready(function(){
 			var suntext=new THREE.ImageUtils.loadTexture("../img/Planet2.jpg",{},function(){});
 			var sphereMaterial=new THREE.MeshBasicMaterial({map:suntext});	
 			
-            var geometry3 = new THREE.SphereGeometry ( 0.275,0.275,0.275); 
+            var geometry3 = new THREE.SphereGeometry ( 0.275,30,30); 
             var object=new THREE.Mesh(geometry3, sphereMaterial);
             Context.GameVariables.masterObject=new MovableObject(Context,object,3);
             Context.ThreeJSVariables.scene.add(object);
@@ -87,11 +87,11 @@ $(document).ready(function(){
     new THREE.CubeGeometry(0.3,0.3,0.3)
     ];
     var geometrySphereLevels=[
-    new THREE.SphereGeometry(0.05,0.05,0.05),
-    new THREE.SphereGeometry(0.1,0.1,0.1),
-    new THREE.SphereGeometry(0.15,0.15,0.15),
-    new THREE.SphereGeometry(0.20,0.20,0.20),
-    new THREE.SphereGeometry(0.3,0.3,0.3)
+    new THREE.SphereGeometry(0.05,10,10),
+    new THREE.SphereGeometry(0.1,10,10),
+    new THREE.SphereGeometry(0.15,5,5),
+    new THREE.SphereGeometry(0.20,5,5),
+    new THREE.SphereGeometry(0.3,5,5)
     ];
                 
     var geometry = new THREE.CubeGeometry(0.4,0.4,0.4); 
