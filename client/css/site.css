@@ -1,0 +1,37 @@
+#wrapper {
+    border: 1px solid black;
+    width: 960px;
+    margin: 0 auto;
+}
+
+#title {
+    text-align: center;
+    font-size: 20px;
+}
+
+#mainContent div {
+    border: 1px solid black;
+    min-height: 200px;
+}
+
+    #mainContent div button {
+        float: left;
+        margin-left: 250px;
+        margin-top: 50px;
+        height: 40px;
+    }
+
+#buttonContainer {
+}
+
+#description {
+    text-align: center;
+    min-height: 100px;
+}
+
+#footer {
+    margin-top: 10px;
+    min-height: 100px;
+    border: 1px solid black;
+    text-align: center;
+}
