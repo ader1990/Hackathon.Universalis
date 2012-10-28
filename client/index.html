@@ -1,24 +1,38 @@
 <html>
 <head>
-	<title>Universalis</title>
-	<link rel="stylesheet" type="text/css" href="css/reset.css">
+    <title>Universalis</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/site.css">
+
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-35904793-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
 </head>
 <body>
-	<div id="wrapper">
-		<h1 id="title">Universalis app</h1>
-		<div id="mainContent">
-			<div id="buttonContainer">
-				<button onclick="document.location='single/index.html';" title="Single player game" >Single player</button>
-				<button onclick="document.location='multiple/index.html';" title="Single player game">Multiplayer</button>
-			</div>
-			<div id="description">
-				Put description here
-			</div>
-		</div>
-		<div id="footer">
-			Put footer here
-		</div>
-	</div>
+    <div id="wrapper">
+        <h1 id="title">Universalis app</h1>
+        <div id="mainContent">
+            <div id="buttonContainer">
+                <button onclick="document.location='single/index.html';" title="Single player game">Single player</button>
+                <button onclick="document.location='multiple/index.html';" title="Single player game">Multiplayer</button>
+            </div>
+            <div id="description">
+                Put description here
+            </div>
+        </div>
+        <div id="footer">
+            Put footer here
+        </div>
+    </div>
 </body>
 </html>
